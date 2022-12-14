@@ -7,11 +7,11 @@ function onLoginForm(event) {
 
   const formData = new FormData(event.currentTarget);
 
-  console.log(formData);
-
+  let obj = {};
   formData.forEach((value, name) => {
-    console.log(`name`, name);
-    console.log(`value`, value);
+    obj[name] = value;
+
+    console.log(obj);
 
     const inputs = document.querySelectorAll("input");
 

@@ -1,7 +1,7 @@
 const refs = {
   color: document.querySelector(".color"),
-  buttonChangeColor: document.querySelector(".change-color")
-}
+  buttonChangeColor: document.querySelector(".change-color"),
+};
 
 function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215)
@@ -9,13 +9,11 @@ function getRandomHexColor() {
     .padStart(6, 0)}`;
 }
 
+refs.buttonChangeColor.addEventListener("click", () => {
+  let changeColor = getRandomHexColor();
+  document.body.style.backgroundColor = changeColor;
+  refs.color.textContent = changeColor;
 
-refs.buttonChangeColor.addEventListener('click', () => {
-  document.body.style.backgroundColor = getRandomHexColor();
-  refs.color.textContent = getRandomHexColor();
-
-      console.log('click');
-      console.log(getRandomHexColor());
-    })
-
-    
+  console.log("click");
+  console.log(changeColor);
+});
