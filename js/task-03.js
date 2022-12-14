@@ -19,3 +19,4 @@ images.map((el) => {
   let li = `<li><img src=${el.url} alt=${el.alt}></img></li>`;
   list.insertAdjacentHTML("afterbegin", li);
 });
+
